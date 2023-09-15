@@ -8,6 +8,17 @@ html {
     font-family: 'Open Sans', sans-serif;
 }
 
+* palette colori */
+
+:root {
+    --blue:#0084FD;
+    --light-blue:#B5DDFF;
+    --purple:#9792E4;
+    --yellow:#FDC15F;
+    --dark-grey:#333333;
+    --light:#FFFFFF;
+}
+
 /* Layout */
 
 ul,
@@ -18,11 +29,12 @@ menu {
 
 img {
     width: 100%;
+    display: block;
 }
 
 a {
     text-decoration: none;
-    color: currentColor;
+    color: white;
     display: inline-block;
 }
 
@@ -87,13 +99,36 @@ a {
 
 .page-header {
     background-color: #0084FD;
+    padding: 15px 30px;
 }
 
 .navbar-list {
     display: flex;
-    gap: 22px;
+    gap: 30px;
     align-items: center;
 }
+
+.hambur {
+    color: white;
+    font-size: 30px;
+    display: none;
+}
+
+/* Header Media Query */
+
+@media (max-width: 768px) {
+
+    .items-text {
+        display: none;
+    }
+    
+    .hambur {
+        display: inherit;
+    }
+    
+}
+
+
 
 /* Debug */
 
