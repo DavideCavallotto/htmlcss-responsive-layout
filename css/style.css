@@ -143,6 +143,7 @@ a {
 .card-text {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     gap: 25px;
     padding: 25px 20px;
     font-weight: 700;
@@ -162,14 +163,9 @@ a {
     padding-right: 10px;
 }
 
-.card-img {
-    padding-top: 40px;
-    padding-right: 40px;
-    padding-left: 40px;
-}
-
 .big-card {
     display: flex;
+    flex-direction: row;    
     height: 100%;
 }
 
@@ -177,11 +173,19 @@ a {
     color: #0084FD;
 }
 
+.big-card figure {
+    align-self: flex-end;    
+    padding-top: 40px;
+    padding-right: 40px;
+}
+
+
 .small-card {
     display: flex;
     flex-direction: column-reverse;
     height: 100%;
     align-items: center;
+    justify-content: center;
 }
 
 .small-card p,
@@ -189,13 +193,69 @@ a {
     text-align: center;
 }
 
-.card-icon {    
+.card-icon i {    
     color: #0084FD;
+    padding-top: 40px;
+    font-size: 80px;
+
 }
 
-.b-icon {
-    font-size: 80px;
+.hero [class ^="col"] {
+    padding: 15px;
 }
+
+/* Hero Media Query */
+
+@media (max-width: 768px) {
+    .big-card {
+        flex-wrap: wrap;
+    }
+
+    figure img {
+        width: 50%;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .col-8 {
+        flex-basis: content;
+    }
+    .col-4 {
+        flex-basis: content;
+        aspect-ratio: 1;
+    }
+
+    .hero p {
+        font-size: 20px;
+    }
+
+    .hero h3 {
+        font-size: 30px;
+    }
+
+    .card-icon i {
+        font-size: 150px;
+    }
+
+    figure img {
+        width: 100%;        
+    }
+
+    .big-card figure {
+        padding: 0;
+    }
+
+    .card-text {
+        text-align: center;
+    }
+
+    .hero .button {
+        align-self: center;
+        font-size: 20px;
+    }
+}
+
 
 
 
@@ -218,5 +278,5 @@ a {
     padding: 10px;
 }
 
-@media (min-width: 576px) { ... }
-@media (min-width: 768px) { ... }
+@media (max-width: 576px) { ... }
+@media (max-width: 768px) { ... }
