@@ -28,7 +28,7 @@ menu {
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
     display: block;
 }
 
@@ -132,12 +132,13 @@ a {
 .hero {
     width: 100%;
     background-color: white;
-    padding: 50px 0;
+    padding-top: 50px;
+    padding-bottom: 80px;
 }
 
 .card {
     background-color: #B5DDFF;    
-    border-radius: 20px;    
+    border-radius: 30px;    
 }
 
 .card-text {
@@ -200,7 +201,7 @@ a {
 
 }
 
-.hero [class ^="col"] {
+.row > [class ^="col"] {
     padding: 15px;
 }
 
@@ -215,14 +216,18 @@ a {
         width: 50%;
     }
 
+    .hero {
+        padding-bottom: 105px;
+    }
+
 }
 
 @media (max-width: 576px) {
     .col-8 {
-        flex-basis: content;
+        flex-basis: 100%;
     }
     .col-4 {
-        flex-basis: content;
+        flex-basis: 100%;
         aspect-ratio: 1;
     }
 
@@ -255,6 +260,104 @@ a {
         font-size: 20px;
     }
 }
+
+/* First Section */
+
+section.planning {
+    background-color: #9792E4;
+}
+
+.planning .card {
+    background-color: white;
+    color: #333333;
+}
+
+.planning .row {
+    flex-wrap: nowrap;
+    padding-top: 100px;
+    padding-bottom: 50px;    
+}
+
+.planning .card {
+    padding: 20px;
+    text-align: center;      
+}
+
+.planning .col-6:nth-child(2) {
+    align-self: flex-end;
+    
+}
+
+.planning .col-6:nth-child(2) h3 {
+    margin: 25px 0;    
+}
+
+.planning .col-6:nth-child(2) p {
+    margin-bottom: 25px;    
+}
+
+/* .planning .col-6:nth-child(1) p {
+    line-height: 25px;    
+} */
+
+.planning .col-6:nth-child(1) h2 {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-size: 35px;     
+}
+
+.planning .col-6:nth-child(2) i {
+    background-color: #9792E4;
+    border-radius: 50%;
+    padding: 18px 20px;  
+}
+
+.planning .card h2 {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-size: 35px;     
+}
+
+.develop-img {
+    width: 250px;
+    margin: 0 auto;
+    
+}
+
+.planning .col-6 {
+    color: white;
+}
+
+
+/* First Section Media Query */
+
+@media (max-width: 768px) { 
+    .planning .row {
+        flex-direction: column;
+    }
+
+    .planning img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .planning .col-6:nth-child(2) h3 {
+        font-size: 27px;    
+    }
+
+    .planning p {
+        font-size: 22px;
+    }
+
+    .planning .container-small {
+        padding: 0 20px;
+    }
+}
+
+
+
+
 
 
 
